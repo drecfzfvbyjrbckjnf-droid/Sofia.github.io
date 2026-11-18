@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Garden - My Lists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="lists-page">
+
+        <!-- Background layer -->
+        <div class="lists-background"></div>
+
+        <!-- Header -->
+        <header class="top-bar">
+            <!-- Round Avatar from Page 1 style -->
+            <div class="avatar-container">
+                <div class="round-avatar">
+                    <img src="./images/round-image.jpg" alt="Avatar">
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Type here..." aria-label="Search lists">
+            </div>
+
+            <button class="icon-button view-btn" id="viewToggleBtn" aria-label="Toggle View">
+                <span class="view-icon">≡</span>
+            </button>
+
+            <!-- Plus button opens modal -->
+            <button class="icon-button add-btn" id="addListBtn" aria-label="Add List">+</button>
+        </header>
+
+        <!-- Lists Container -->
+        <section class="lists-container" id="listsContainer">
+
+            <!-- Example Card 1 -->
+            <article class="list-card">
+                <div class="list-card-content">
+                    <h2 class="list-title">The name of list</h2>
+                    <div class="list-meta">
+                        <span class="feather-icon">🪶</span>
+                        <span class="word-count">0</span>
+                    </div>
+                </div>
+                <button class="dots-button" aria-label="List options">⋮</button>
+
+                <!-- Context Menu Dropdown -->
+                <div class="context-menu">
+                    <button class="context-menu-item rename-opt">Rename</button>
+                    <button class="context-menu-item duplicate-opt">Duplicate</button>
+                    <button class="context-menu-item delete-opt">Delete</button>
+                </div>
+            </article>
+
+            <!-- Example Card 2 -->
+            <article class="list-card">
+                <div class="list-card-content">
+                    <h2 class="list-title">The name of list</h2>
+                    <div class="list-meta">
+                        <span class="feather-icon">🪶</span>
+                        <span class="word-count">0</span>
+                    </div>
+                </div>
+                <button class="dots-button" aria-label="List options">⋮</button>
+
+                <div class="context-menu">
+                    <button class="context-menu-item rename-opt">Rename</button>
+                    <button class="context-menu-item duplicate-opt">Duplicate</button>
+                    <button class="context-menu-item delete-opt">Delete</button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Add List Modal Popup -->
+        <div class="modal-overlay" id="addListModal">
+            <div class="modal-card">
+                <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+                <h3 class="modal-title">Type the name of<br>your new list</h3>
+                <input type="text" class="modal-input" id="newListInput" placeholder="Type here...">
+                <button class="confirm-button" id="confirmAddBtn">Confirm</button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" aria-label="Calendar">📅</a>
+            <a href="#" class="nav-item" aria-label="Share">📤</a>
+            <a href="#" class="nav-item" aria-label="Feather">🪶</a>
+            <a href="#" class="nav-item" aria-label="Profile">👤</a>
+        </nav>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
